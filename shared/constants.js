@@ -1,0 +1,31 @@
+// Shared constants for the Minecraft clone
+export const CHUNK_SIZE = 16;
+export const WORLD_HEIGHT = 64;
+export const BLOCK_TYPES = {
+  AIR: 0,
+  GRASS: 1,
+  DIRT: 2,
+  STONE: 3,
+  WOOD: 4,
+  LEAVES: 5,
+  COBBLESTONE: 6,
+  PLANKS: 7,
+  SAND: 8,
+  WATER: 9
+};
+
+export const BLOCK_COLORS = {
+  [BLOCK_TYPES.GRASS]: 0x4CAF50,
+  [BLOCK_TYPES.DIRT]: 0x8D6E63,
+  [BLOCK_TYPES.STONE]: 0x9E9E9E,
+  [BLOCK_TYPES.WOOD]: 0x8D4B2A,
+  [BLOCK_TYPES.LEAVES]: 0x388E3C,
+  [BLOCK_TYPES.COBBLESTONE]: 0x757575,
+  [BLOCK_TYPES.PLANKS]: 0xDEB887,
+  [BLOCK_TYPES.SAND]: 0xF4A460,
+  [BLOCK_TYPES.WATER]: 0x4169E1
+};
+
+export const PLAYER_SPEED = 5;
+export const JUMP_FORCE = 10;
+export const GRAVITY = -30;

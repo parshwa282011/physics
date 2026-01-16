@@ -1,0 +1,17 @@
+{
+  "name": "minecraft-clone",
+  "version": "1.0.0",
+  "description": "A web-based Minecraft clone with Three.js and Ammo.js",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
+  "dependencies": {
+    "ws": "^8.14.2",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

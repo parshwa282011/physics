@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Clone</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        #login { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+        #game { display: none; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <div id="login">
+        <h1>Minecraft Clone</h1>
+        <input type="text" id="serverUrl" placeholder="Server URL" value="ws://localhost:8080"><br><br>
+        <input type="text" id="username" placeholder="Username"><br><br>
+        <button id="connectBtn">Connect</button>
+    </div>
+    <div id="game"></div>
+
+    <script type="module">
+        // Set default server URL to current host
+        document.getElementById('serverUrl').value = 'wss://' + window.location.host;
+
+        import { Game } from './js/game.js';
+
+        const game = new Game();
+
+        document.getElementById('connectBtn').addEventListener('click', () => {
+            const serverUrl = document.getElementById('serverUrl').value;
+            const username = document.getElementById('username').value;
+            if (username) {
+                game.connect(serverUrl, username);
+            }
+        });
+    </script>
+</body>
+</html>
